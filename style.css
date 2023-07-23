@@ -1,0 +1,10 @@
+* {
+    font-family: sans-serif, Verdana, "Times New Roman";
+    font-size: 20px;
+    background-color: royalblue;
+    color: white;
+}
+
+h1:hover {
+    cursor: pointer;
+}

@@ -5,6 +5,18 @@
     color: white;
 }
 
-h1:hover {
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+button {
+    color: royalblue;
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+}
+
+button:hover {
     cursor: pointer;
 }

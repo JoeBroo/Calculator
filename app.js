@@ -1,10 +1,46 @@
-const h1 = document.querySelector('h1');
+const addBtn = document.querySelector('.add');
+const subtractBtn = document.querySelector('.subtract');
+const multiplyBtn = document.querySelector('.multiply');
+const divideBtn = document.querySelector('.divide');
 
-function testFun() {
-const para = document.createElement('p');
-para.style.color = 'white';
-para.textContent = 'I am alive! ';
-h1.appendChild(para);
+
+// Add two numbers
+function add() {
+    let a = 2;
+    let b = 2;
+    let sum = a + b;
+    console.log(`${a} + ${b} is ${sum}`);
+    return sum
 }
 
-h1.addEventListener('click', testFun);
+//Subtract two numbers
+function subtract() {
+    let a = 5;
+    let b = 3;
+    let sum = a - b;
+    console.log(`${a} - ${b} is ${sum}`);
+    return sum;
+}
+
+//Multiply two numbers
+function multiply() {
+    let a = 5;
+    let b = 2;
+    let sum = a * b;
+    console.log(`${a} x ${b} is ${sum}`);
+    return sum;
+}
+
+//Divide two numbers
+function divide() {
+    let a = 100;
+    let b = 25;
+    let sum = a / b;
+    console.log(`${a} / ${b} is ${sum}`);
+    return sum;
+}
+
+addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', subtract);
+multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', divide);

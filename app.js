@@ -2,42 +2,47 @@ const addBtn = document.querySelector('.add');
 const subtractBtn = document.querySelector('.subtract');
 const multiplyBtn = document.querySelector('.multiply');
 const divideBtn = document.querySelector('.divide');
+const operators = ['+', '-', '*', '/'];
 
 
 // Add two numbers
 function add() {
-    let a = 2;
-    let b = 2;
-    let sum = a + b;
-    console.log(`${a} + ${b} is ${sum}`);
-    return sum
+    let a = prompt('First number: ');
+    let b = prompt('Second number: ');
+    let numOne = parseInt(a);
+    let numTwo = parseInt(b);
+    let sum = numOne + numTwo;
+    alert(`${numOne} + ${numTwo} is ${sum}`);
 }
 
 //Subtract two numbers
 function subtract() {
-    let a = 5;
-    let b = 3;
-    let sum = a - b;
-    console.log(`${a} - ${b} is ${sum}`);
-    return sum;
+    let a = prompt('First number: ');
+    let b = prompt('Second number: ');
+    let numOne = parseInt(a);
+    let numTwo = parseInt(b);
+    let sum = numOne - numTwo;
+    alert(`${numOne} - ${numTwo} is ${sum}`);
 }
 
 //Multiply two numbers
 function multiply() {
-    let a = 5;
-    let b = 2;
-    let sum = a * b;
-    console.log(`${a} x ${b} is ${sum}`);
-    return sum;
+    let a = prompt('First number: ');
+    let b = prompt('Second number: ');
+    let numOne = parseInt(a);
+    let numTwo = parseInt(b);
+    let sum = numOne * numTwo;
+    alert(`${numOne} x ${numTwo} is ${sum}`);
 }
 
 //Divide two numbers
 function divide() {
-    let a = 100;
-    let b = 25;
-    let sum = a / b;
-    console.log(`${a} / ${b} is ${sum}`);
-    return sum;
+    let a = prompt('First number: ');
+    let b = prompt('Second number: ');
+    let numOne = parseInt(a);
+    let numTwo = parseInt(b);
+    let sum = numOne / numTwo;
+    alert(`${numOne} / ${numTwo} is ${sum}`);
 }
 
 addBtn.addEventListener('click', add);

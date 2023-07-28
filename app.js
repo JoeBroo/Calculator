@@ -49,3 +49,25 @@ addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', divide);
+
+function operate() {
+    let operator = prompt('choose operator: ');
+    console.log(operator);
+
+    if (operator === '+') {
+        add();
+
+    } else if (operator === '-') {
+        subtract();
+
+    } else if (operator === '*') {
+        multiply();
+
+    } else if (operator === '/') {
+        divide();
+
+    } else {
+        alert(`Please enter one of the following operators: '+', '-', '*' or '/'`);
+        operate();
+    }
+ }

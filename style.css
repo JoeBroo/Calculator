@@ -1,25 +1,14 @@
-* {
-    font-family: sans-serif, Verdana, "Times New Roman";
-    font-size: 20px;
-    background-color: royalblue;
-    color: white;
+body {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    width: 100vw;
+    height: 100vh;
 }
 
 button {
-    color: royalblue;
-    background-color: white;
-    border: none;
-    margin-right: 10px;
-}
-
-button:hover {
-    cursor: pointer;
+    height: 75px;
+    width: 75px;
+    font-size: 45px;
 }

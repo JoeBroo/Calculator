@@ -7,8 +7,24 @@ body {
     height: 100vh;
 }
 
+.calculator {
+    background-color: rgb(221, 234, 243);
+    border: 5px solid rgb(111, 190, 238);
+    border-radius: 5px;
+}
+
 button {
+    font-size: 45px;
+    color: rgb(221, 234, 243);
+    background-color: rgb(111, 190, 238);
     height: 75px;
     width: 75px;
-    font-size: 45px;
+    border: 1px solid rgb(60, 143, 221);
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 85%;
+    cursor: pointer;
+    background-color: rgb(60, 143, 221);
 }

@@ -21,10 +21,37 @@ button {
     width: 75px;
     border: 1px solid rgb(60, 143, 221);
     border-radius: 5px;
+    margin: 10px;
 }
 
 button:hover {
     opacity: 85%;
     cursor: pointer;
     background-color: rgb(60, 143, 221);
+}
+
+.display-clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.display {
+    height: 75px;
+    width: 300px;
+    border: 2px solid rgb(60, 143, 221);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.display-previous {
+    font-size: 25px;
+}
+
+.display-current {
+    font-size: 35px;
 }

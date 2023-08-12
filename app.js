@@ -1,73 +1,54 @@
-const addBtn = document.querySelector('.add');
-const subtractBtn = document.querySelector('.subtract');
-const multiplyBtn = document.querySelector('.multiply');
-const divideBtn = document.querySelector('.divide');
-const operators = ['+', '-', '*', '/'];
+const clear = document.querySelector('.clear');
+const equal = document.querySelector('.equal');
+const decimal = document.querySelector('.decimal');
 
+const numbers = document.querySelectorAll('.number');
+const operators = document.querySelectorAll('.operator');
 
-// Add two numbers
-function add() {
-    let a = prompt('First number: ');
-    let b = prompt('Second number: ');
-    let numOne = parseInt(a);
-    let numTwo = parseInt(b);
-    let sum = numOne + numTwo;
-    alert(`${numOne} + ${numTwo} is ${sum}`);
+const previousScreen = document.querySelector('.display-previous');
+const currentScreen = document.querySelector('.display-current');
+
+let operator = ''
+let previousValue = ''
+let currentValue = ''
+
+function getNumber(num) {
+    if (currentValue.length <= 7) {
+        currentValue += num;
+    }
 }
 
-//Subtract two numbers
-function subtract() {
-    let a = prompt('First number: ');
-    let b = prompt('Second number: ');
-    let numOne = parseInt(a);
-    let numTwo = parseInt(b);
-    let sum = numOne - numTwo;
-    alert(`${numOne} - ${numTwo} is ${sum}`);
+function getOperator(op) {
+    operator = op;
+    previousValue = currentValue;
+    currentValue = '';
 }
 
-//Multiply two numbers
-function multiply() {
-    let a = prompt('First number: ');
-    let b = prompt('Second number: ');
-    let numOne = parseInt(a);
-    let numTwo = parseInt(b);
-    let sum = numOne * numTwo;
-    alert(`${numOne} x ${numTwo} is ${sum}`);
-}
-
-//Divide two numbers
-function divide() {
-    let a = prompt('First number: ');
-    let b = prompt('Second number: ');
-    let numOne = parseInt(a);
-    let numTwo = parseInt(b);
-    let sum = numOne / numTwo;
-    alert(`${numOne} / ${numTwo} is ${sum}`);
-}
-
-addBtn.addEventListener('click', add);
-subtractBtn.addEventListener('click', subtract);
-multiplyBtn.addEventListener('click', multiply);
-divideBtn.addEventListener('click', divide);
-
-function operate() {
-    let operator = prompt('choose operator: ');
-    console.log(operator);
+function calculate() {
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
 
     if (operator === '+') {
-        add();
-
+        previousValue += currentValue;
     } else if (operator === '-') {
-        subtract();
-
-    } else if (operator === '*') {
-        multiply();
-
+        previousValue -= currentValue;
+    } else if (operator === 'x') {
+        previousValue *= currentValue;
     } else if (operator === '/') {
-        divide();
-
-    } else {
-        alert(`Please enter one of the following operators: '+', '-', '*' or '/'`);
-        operate();
+        previousValue / currentValue;
     }
- }
+    
+    previousValue = roundNum(previousValue);
+    previousValue = previousValue.toString();
+    currentValue = previousValue.toString();
+}
+
+function roundNum(num) {
+    return Math.round(num * 1000) / 1000;
+}
+
+function addDecimal() {
+    if (!currentValue.includes('.')) {
+        currentValue += '.';
+    }
+}
